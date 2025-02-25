@@ -1,16 +1,52 @@
 <!DOCTYPE html>
 <html>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <head>
     <title>Online HTML Editor</title>
     <style>
       html {
         scroll-behavior: smooth;
       }
+
+      /* thu nho */
+      @media only screen and (max-width: 900px) {
+        #container {
+          display: block !important;
+          margin-left: 10px !important;
+          margin-right: 10px !important;
+          width: 100%;
+        }
+        #left,
+        #right {
+          display: block !important;
+          width: 100% !important;
+          box-sizing: border-box;
+        }
+
+        form {
+          margin: 0;
+        }
+
+        iframe {
+          width: 350px;
+          height: 250px;
+        }
+
+        .input-group {
+          display: block !important;
+        }
+      }
+      /* end thu nho */
     </style>
   </head>
   <body>
-    <div style="max-width: 800px; display: flex; margin: 0 auto">
-      <div>
+    <div
+      id="container"
+      style="display: flex; gap: 50px; margin-left: 100px; margin-right: 150px"
+    >
+      <!-- left -->
+      <div id="left">
         <style>
           /*Này là chỉnh chữ cho toàn web */
           body {
@@ -40,12 +76,17 @@
             white-space: normal;
             text-overflow: ellipsis;
           }
+          
           /* Chỉnh kích cỡ ảnh toàn web */
           img {
-            width: 100%;
+            width: 80%;
             aspect-ratio: 3/2;
             object-fit: cover;
+            margin: auto;
+            margin-bottom: 10px;
+            display: block;
           }
+          
         </style>
         <h1
           style="
@@ -120,33 +161,32 @@
           src="https://aodailianna.com/wp-content/uploads/2023/08/ao-dai-xua-va-nay-7-1.png"
         />
         <h3 id="I-2">2. Cấu tạo của áo dài</h3>
-        <ul style="list-style-type: circle">
           <img
             src="https://aodailianna.com/wp-content/uploads/2023/08/ao-dai-xua-va-nay-3-1.png"
           />
           <p>Cấu tạo áo dài gồm 5 phần chính:</p>
           <li>
-            <strong> Cổ áo dài:</strong>
+            <strong> Cổ áo:</strong>
             Truyền thống cao 4-5 cm, hiện có nhiều kiểu như cổ tròn, cổ vuông,
             cổ thuyền, cổ chữ U… và có thể đính ngọc trang trí.
           </li>
           <li>
-            <strong> Thân áo dài: </strong>
+            <strong> Thân áo: </strong>
             Kéo dài từ cổ đến eo, cài cúc chéo từ cổ xuống ngang hông. Từ eo trở
             xuống, áo xẻ tà hai bên hông, có kiểu áo dài 2 tà hoặc 4 tà.
           </li>
           <li>
-            <strong>Tà áo dài:</strong>
+            <strong>Tà áo:</strong>
             Thường có 2 tà (trước và sau), một số kiểu cách tân có tà trước ngắn
             hơn tà sau hoặc 4 tà để tạo độ phồng, duyên dáng hơn.
           </li>
           <li>
-            <strong>Tay áo dài: </strong>
+            <strong>Tay áo: </strong>
             Truyền thống ôm sát tay, nay có nhiều biến tấu như tay phồng, tay
             lỡ, tay loe, tay ngắn, tay xẻ.
           </li>
           <li>
-            <strong>Quần áo dài: </strong>
+            <strong>Quần áo: </strong>
             Thay cho váy xưa, ống rộng, chấm gót, chất liệu đa dạng từ lụa, gấm
             đến vải mềm. Màu quần thường trắng nhưng có thể phối màu tùy áo.
             Hiện nay còn có kiểu kết hợp với chân váy dài.
@@ -165,9 +205,9 @@
           src="https://www.youtube.com/embed/QjLrr8UamJk"
           frameborder="0"
           allowfullscreen
+          style="display: block; margin: auto;"
         ></iframe>
         <h3 id="II-1">1. Nguồn gốc và sự hình thành</h3>
-        <ul style="list-style-type: circle">
           <p>
             Áo dài có nguồn gốc từ trang phục của người Việt thời phong kiến,
             chịu ảnh hưởng của trang phục Trung Hoa, đặc biệt là áo giao lĩnh và
@@ -201,7 +241,12 @@
               áng.
             </li>
           </ul>
-          <p>Theo các nhà nghiên cứu và những hiện vật tại các bảo tàng áo dài thì để tiện hơn trong việc lao động sản xuất của người phụ nữ, chiếc áo giao lĩnh được may rời 2 tà trước để buộc vào với nhau, hai tà sau may liền lại thành vạt áo.</p>
+          <p>
+            Theo các nhà nghiên cứu và những hiện vật tại các bảo tàng áo dài
+            thì để tiện hơn trong việc lao động sản xuất của người phụ nữ, chiếc
+            áo giao lĩnh được may rời 2 tà trước để buộc vào với nhau, hai tà
+            sau may liền lại thành vạt áo.
+          </p>
           <img
             src="https://ruza.vn/wp-content/uploads/2023/12/ao-tu-than-pc1.jpg"
             width="600"
@@ -217,7 +262,13 @@
             </li>
             <li>Được may bằng lụa cao cấp, có màu sắc trang nhã.</li>
           </ul>
-          <p>Trên cơ sở áo tứ thân, đến thời vua Gia Long áo ngũ thân xuất hiện. Loại áo này thường được may thêm một tà nhỏ để tượng trưng cho địa vị của người mặc trong xã hội. Giai cấp quan lại quý tộc thường mặc áo ngũ thân để phân biệt với các tầng lớp nhân dân lao động trong xã hội.</p>
+          <p>
+            Trên cơ sở áo tứ thân, đến thời vua Gia Long áo ngũ thân xuất hiện.
+            Loại áo này thường được may thêm một tà nhỏ để tượng trưng cho địa
+            vị của người mặc trong xã hội. Giai cấp quan lại quý tộc thường mặc
+            áo ngũ thân để phân biệt với các tầng lớp nhân dân lao động trong xã
+            hội.
+          </p>
           <img
             src="https://media.routine.vn/prod/media/ao-ngu-than-la-gi-1-jpg-bhol.webp"
             width="700"
@@ -232,7 +283,14 @@
             <li>Kết hợp với các yếu tố Tây phương như tay phồng, cổ tròn.</li>
           </ul>
         </ol>
-        <p>Kiểu áo này được cải biến từ áo ngũ thân do họa sĩ Cát Tường sáng tạo vào năm 1939. Áo dài Lemur là tên được đặt theo tên tiếng Pháp của bà, áo chỉ có hai vạt trước và sau, vạt trước dài chấm đât, áo được may ôm sát cơ thể, tay thẳng và có viền nhỏ. Khuy áo được mở sang bên sườn nhằm nhấn thêm vẻ nữ tính, kiểu áo này thịnh hành đến 1943 thì bị lãng quên.</p>
+        <p>
+          Kiểu áo này được cải biến từ áo ngũ thân do họa sĩ Cát Tường sáng tạo
+          vào năm 1939. Áo dài Lemur là tên được đặt theo tên tiếng Pháp của bà,
+          áo chỉ có hai vạt trước và sau, vạt trước dài chấm đât, áo được may ôm
+          sát cơ thể, tay thẳng và có viền nhỏ. Khuy áo được mở sang bên sườn
+          nhằm nhấn thêm vẻ nữ tính, kiểu áo này thịnh hành đến 1943 thì bị lãng
+          quên.
+        </p>
         <img
           src="https://file.hstatic.net/200000503583/file/ao-dai-lemur__8__6b6b1611de57485f998316b3780f004a.jpg"
         />
@@ -260,7 +318,6 @@
         />
         <h2 id="III">III. Áo dài ngày nay</h2>
         <h3 id="III-1">1. Đặc điểm</h3>
-        <ul style="list-style-type: circle">
           <li>
             <strong>Kiểu dáng đa dạng:</strong>
             Áo dài hiện đại kế thừa những nét đẹp truyền thống nhưng cũng có
@@ -291,7 +348,7 @@
             năng động, hiện đại.
           </li>
         </ul>
-        <p style="color: pink; font-size: 25px">
+        <p style="color: rgb(136, 13, 33); font-size: 25px">
           <strong>Một số hình ảnh áo dài cách tân</strong>
         </p>
         <img
@@ -319,6 +376,7 @@
           src="https://www.youtube.com/embed/nHmwr3ExxGE"
           frameborder="0"
           allowfullscreen
+          style="display: block; margin: auto;"
         ></iframe>
         <img
           src="https://dongphucbonmua.com/wp-content/uploads/2023/06/Dong-phuc-tiep-van-hang-khong-cua-nam.jpg"
@@ -371,17 +429,21 @@
           <textarea id="binhluan"></textarea>
 
           <div class="input-group">
-            <label for="ten">Tên *</label>
-            <input id="ten" type="text" />
+            <div style="display: flex; gap: 10px">
+              <label for="ten">Tên *</label> <input id="ten" type="text" />
+            </div>
 
-            <label for="email">Email *</label>
-            <input id="email" type="text" />
-
-            <label for="trangweb">Trang web *</label>
-            <input id="trangweb" type="text" />
+            <div style="display: flex; gap: 10px">
+              <label for="email">Email *</label>
+              <input id="email" type="text" />
+            </div>
+            <div style="display: flex; gap: 10px">
+              <label for="web">Web *</label>
+              <input id="web" type="text" />
+            </div>
           </div>
 
-          <input type="checkbox" /> Lưu tên của tôi, email, và trang web trong
+          <input type="checkbox" /> Lưu tên của tôi, email, và web trong
           trình duyệt này cho lần bình luận kế tiếp của tôi. <br /><br />
           <input type="submit" value="Gửi thông tin" />
         </form>
@@ -395,7 +457,155 @@
             >
           </p>
         </footer>
-        <p>This is real time online HTML Editor</p>
+        <p>By nhóm 12A1</p>
+      </div>
+      <!-- right -->
+      <div id="right" style="min-width: 300px">
+        <h2>Tin tức</h2>
+        <div style="display: flex; flex-direction: column; gap: 15px; align-items: start;">
+          <div style="display: flex; gap: 10px">
+            <img
+              style="width: 80px; height: 80px; object-fit: cover"
+              src="https://i1-giaitri.vnecdn.net/2024/11/29/image001-7336-1732848347.jpg?w=680&h=0&q=100&dpr=1&fit=crop&s=vOhdGTv_cQ3VwF7MwVJVlA"
+              alt=""
+            />
+            <a
+              style="font-size: 16px"
+              href="https://vnexpress.net/d-chic-ra-mat-bo-suu-tap-ao-dai-ton-vinh-van-hoa-viet-4821789.html"
+              target="_blank"
+              >D.Chic ra mắt bộ sưu tập áo dài tôn vinh văn hóa Việt</a
+            >
+          </div>
+          <div style="display: flex; gap: 10px">
+            <img
+              style="width: 80px; height: 80px; object-fit: cover"
+              src="https://aodailianna.com/wp-content/uploads/2025/02/ao-dai-cuoi-truyen-thong-dep-2.jpg"
+              alt=""
+            />
+            <a
+              style="font-size: 16px"
+              href="https://aodailianna.com/ao-dai-cuoi-truyen-thong-dep/"
+              target="_blank"
+              >Gợi ý những mẫu áo dài cưới truyền thống đẹp, sang trọng cho cô
+              dâu</a
+            >
+          </div>
+          <div style="display: flex; gap: 10px">
+            <img
+              style="width: 80px; height: 80px; object-fit: cover"
+              src="https://aodailianna.com/wp-content/uploads/2025/02/ao-ba-ba-dep.jpg"
+              alt=""
+            />
+            <a
+              style="font-size: 16px"
+              href="https://aodailianna.com/ao-ba-ba-dep/"
+              target="_blank"
+              >Tổng hợp các mẫu áo bà ba đẹp theo xu hướng mới nhất</a
+            >
+          </div>
+          <div style="display: flex; gap: 10px">
+            <img
+              style="width: 80px; height: 80px; object-fit: cover"
+              src="https://i1-giaitri.vnecdn.net/2024/09/23/Thi-sinh-Miss-Cosmo-dien-ao-dai-90-1727063076.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=P6iinr5dhdTyEOuyHJXXhA"
+              alt=""
+            />
+            <a
+              style="font-size: 16px"
+              href="https://vnexpress.net/dan-nguoi-dep-quoc-te-dien-ao-dai-lua-4795959.html"
+              target="_blank"
+              >Dàn người đẹp quốc tế diễn áo dài lụa</a
+            >
+          </div>
+          <div style="display: flex; gap: 10px">
+            <img
+              style="width: 80px; height: 80px; object-fit: cover"
+              src="https://aodailianna.com/wp-content/uploads/2025/01/mau-ao-dai-truyen-thong-viet-nam-tai-my.jpg"
+              alt=""
+            />
+            <a
+              style="font-size: 16px"
+              href="https://aodailianna.com/mau-ao-dai-truyen-thong-viet-nam-tai-my/"
+              target="_blank"
+              >Khám phá những mẫu áo dài truyền thống Việt Nam tại Mỹ</a
+            >
+          </div>
+        </div>
+
+        <h2>Sản phẩm</h2>
+        <div style="display: flex; flex-direction: column; gap: 15px; align-items: start;">
+          <div style="display: flex; gap: 10px;">
+            <img
+              style="width: 80px; height: 80px; object-fit: cover"
+              src="//product.hstatic.net/1000316092/product/lbsg2222_1f942c278bee48238d47de311d66d62b_compact.jpg"
+              alt=""
+            />
+            <a
+              style="font-size: 16px"
+              href="https://vania.com.vn/collections/ao-dai/products/ao-dai-voan-to-4-ta-dinh-no"
+              target="_blank"
+              >Áo dài voan tơ 4 tà đính nơ
+              <strong style="display: block; margin-top: 4px;">750,000₫</strong></a
+            >
+          </div>
+          <div style="display: flex; gap: 10px">
+            <img
+              style="width: 80px; height: 80px; object-fit: cover"
+              src="//product.hstatic.net/1000316092/product/lbsg2843_e5ca3cb5d65f49e594614e1cb78ba744_compact.jpg"
+              alt=""
+            />
+            <a
+              style="font-size: 16px"
+              href="https://vania.com.vn/collections/ao-dai/products/ao-dai-nam-co-dien-vai-1"
+              target="_blank"
+              >Áo dài nam cổ điển vải
+              <strong style="display: block; margin-top: 4px;">875,000₫</strong></a
+            >
+          </div>
+          <div style="display: flex; gap: 10px">
+            <img
+              style="width: 80px; height: 80px; object-fit: cover"
+              src="//product.hstatic.net/1000316092/product/lbsg5117_5af0b0f29cf64bba8262b244d0dbe44d_compact.jpg"
+              alt=""
+            />
+            <a
+              style="font-size: 16px"
+              href="https://vania.com.vn/collections/ao-dai/products/ao-dai-oganza-4-ta-xuan-cat"
+              target="_blank"
+              >Áo dài oganza 4 tà Xuân Cát
+              <strong style="display: block; margin-top: 4px;">650,000₫</strong></a
+            >
+          </div>
+          <div style="display: flex; gap: 10px">
+            <img
+              style="width: 80px; height: 80px; object-fit: cover"
+              src="//product.hstatic.net/1000316092/product/lbsg0629_4bbe5f5e7ada4b8386137fa5d51cfcc4_compact.jpg"
+              alt=""
+            />
+            <a
+              style="font-size: 16px"
+              href="https://vania.com.vn/collections/ao-dai/products/ao-dai-to-tam-4-ta"
+              target="_blank"
+              >Áo dài tơ tằm 4 tà (mới)
+              <strong style="display: block; margin-top: 4px;">950,000₫</strong></a
+            >
+          </div>
+          <div style="display: flex; gap: 10px; ">
+            <img
+              style="width: 80px; height: 80px; object-fit: cover"
+              src="//product.hstatic.net/1000316092/product/gom_0999_dc5cf7f23f4e46b6893f0b633b7b24d2_compact.jpg"
+              alt=""
+            />
+            <a
+              style="font-size: 16px"
+              href="https://vania.com.vn/collections/ao-dai/products/ao-dai-nam-co-dien-to"
+              target="_blank"
+              >Áo dài nam cổ điển tơ
+              <strong style="display: block; margin-top: 4px;">875,000₫</strong></a
+            >
+          </div>
+        </div>
+        
+        
       </div>
     </div>
   </body>
